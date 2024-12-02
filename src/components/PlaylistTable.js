@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PlaylistTable.module.css';
 
@@ -14,7 +14,13 @@ const capitalizeFirstLetter = (text) => {
 };
 
 const PlaylistCard = ({ playlist, index }) => {
+    const [randomNumber, setRandomNumber] = useState(null);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const number = Math.floor(Math.random() * 1000) + 1;
+        setRandomNumber(number);
+    }, []);
 
     const handleRowClick = () => {
         navigate(`/playlists/${playlist._id}`); // Navega para o link da playlist
@@ -25,7 +31,7 @@ const PlaylistCard = ({ playlist, index }) => {
             <td>{index + 1}</td> {/* Exibe o índice incrementado para começar de 1 */}
             <td>
                 <img 
-                    src="https://picsum.photos/200/120" 
+                    src={`https://picsum.photos/id/${randomNumber}/200/120`}
                     alt={playlist._name} 
                     className={styles.playlistImage} 
                 />
