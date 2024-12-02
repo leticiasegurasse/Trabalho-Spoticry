@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Rick and Morty
+Este projeto é uma aplicação web que consome a __Rick and Morty API__, desenvolvida utilizando React com componentes de classe e `styled-components` para a estilização. A aplicação permite que os usuários visualizem informações sobre os personagens da série Rick and Morty, com recursos de pesquisa e paginação.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📋Funcionalidades
+- __Lista de Personagens:__ Os personagens são exibidos em uma lista, com nome e imagem.
+- __Detalhes do Personagem:__ Ao clicar em um personagem, o usuário pode ver informações detalhadas, como status, espécie e gênero.
+- __Pesquisa de Personagens:__ O usuário pode pesquisar personagens pelo nome.
 
-## Available Scripts
+## 🚀Tecnologias Utilizadas
+- __React:__ Biblioteca JavaScript para construção da interface.
+- __Styled-Components:__ Utilizado para estilização dos componentes.
+- __Axios:__ Biblioteca para fazer requisições HTTP à API.
+- __Rick and Morty API:__ Fonte dos dados sobre personagens.
+- __Node.js & npm:__ Utilizados para gerenciar dependências e rodar scripts de desenvolvimento.
 
-In the project directory, you can run:
+## ⚙️Instalação e Execução
+__Pré-requisitos__
 
-### `npm start`
+- __Node.js__ instalado em sua máquina.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+__1. Clone o repositório:__
+```
+git clone https://github.com/leticiasegurasse/API-Rick-and-Morty.git
+cd API-Rick-and-Morty
+```
+__2. Instale as dependências:__
+```
+npm install
+```
+__3. Execute o projeto:__
+```
+npm run start
+```
+__4. Acesse no navegador:__
+```
+http://localhost:3000
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🌐Deploy
+O deploy foi feito utilizando `Surge`, e a aplicação pode ser acessada no seguinte link:
 
-### `npm test`
+[Surge](https://rick-and-foda.surge.sh/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📑Funcionalidades Detalhadas
+- __Detalhes de Personagens:__ Ao clicar em um personagem, uma nova página mostra detalhes como status (vivo, morto, desconhecido), espécie e gênero.
+- __Pesquisa Dinâmica:__ A barra de pesquisa permite encontrar personagens rapidamente conforme o usuário digita.
+- __Componentização:__ O código é organizado em componentes reutilizáveis, com lógica clara e separada para facilitar a manutenção e expansão da aplicação.
 
-### `npm run build`
+- ## 📂Estrutura de Arquivos
+```
+src/
+│
+├── components/
+│   ├── CharacterCard.js   # Componente para exibir informações básicas do personagem
+│   └── Footer.js          # Componente que exibe o rodapé do projeto
+│
+├── pages/
+│   ├── DetailsPage.js     # Componente para exibir os detalhes dos personagens
+│   └── HomePage.js        # Componente para exibir a página inicial
+│
+├── styles/
+│   └── GlobalStyle.js     # Componente para estilização padrão das páginas
+│
+├── App.js                 # Componente principal da aplicação
+└── index.js               # Arquivo de entrada da aplicação
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📝Feito por
+- __Leticia Segurasse__
+- __Miguel Dutra__
+- __Thiago Roncete__ 
+#
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
