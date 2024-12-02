@@ -3,6 +3,7 @@ import styles from "./AddPlaylist.module.css";
 import NavBar from "../components/NavBar";
 import { addPlaylist } from "../services/playlistService"; // Importa funções do serviço
 import { fetchAllMusic } from "../services/musicService"; // Importa função para buscar músicas
+import { useNavigate } from "react-router-dom";
 
 function AddPlaylist() {
   const [songs, setSongs] = useState([]); // Todas as músicas
@@ -11,6 +12,7 @@ function AddPlaylist() {
   const [playlistName, setPlaylistName] = useState(""); // Nome da playlist
   const [playlistDescription, setPlaylistDescription] = useState(""); // Descrição da playlist
   const [feedback, setFeedback] = useState(null); // Feedback para o usuário
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Busca todas as músicas
@@ -61,9 +63,11 @@ function AddPlaylist() {
     try {
       await addPlaylist(payload); // Usa a função do serviço para adicionar a playlist
       setFeedback("Playlist criada com sucesso!");
+      alert("Playlist criada com sucesso!");
       setPlaylistName("");
       setPlaylistDescription("");
       setSelectedSongs([]);
+      navigate("/minhas-playlists");
     } catch (error) {
       console.error("Erro ao criar playlist:", error);
       setFeedback("Erro ao criar playlist. Tente novamente.");
