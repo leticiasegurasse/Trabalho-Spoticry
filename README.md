@@ -1,45 +1,73 @@
-# Rick and Morty
-Este projeto é uma aplicação web que consome a __Rick and Morty API__, desenvolvida utilizando React com componentes de classe e `styled-components` para a estilização. A aplicação permite que os usuários visualizem informações sobre os personagens da série Rick and Morty, com recursos de pesquisa e paginação.
+# Spotcry 🎶
 
-## 📋Funcionalidades
-- __Lista de Personagens:__ Os personagens são exibidos em uma lista, com nome e imagem.
-- __Detalhes do Personagem:__ Ao clicar em um personagem, o usuário pode ver informações detalhadas, como status, espécie e gênero.
-- __Pesquisa de Personagens:__ O usuário pode pesquisar personagens pelo nome.
+Este projeto é uma aplicação web que permite gerenciar músicas e playlists, desenvolvida utilizando React.js com integração a uma API externa. O objetivo é proporcionar uma experiência fluida para os usuários, com funcionalidades como autenticação, gerenciamento de músicas e playlists, além de reprodução integrada com o YouTube.
 
-## 🚀Tecnologias Utilizadas
-- __React:__ Biblioteca JavaScript para construção da interface.
-- __Styled-Components:__ Utilizado para estilização dos componentes.
-- __Axios:__ Biblioteca para fazer requisições HTTP à API.
-- __Rick and Morty API:__ Fonte dos dados sobre personagens.
-- __Node.js & npm:__ Utilizados para gerenciar dependências e rodar scripts de desenvolvimento.
+## 📋 Funcionalidades
 
-## ⚙️Instalação e Execução
-__Pré-requisitos__
+- **Autenticação:**
+  - Login com proteção de rotas para usuários autenticados.
+  - Validação de token JWT e controle de sessões.
 
-- __Node.js__ instalado em sua máquina.
+- **Gerenciamento de Músicas:**
+  - Listagem de todas as músicas disponíveis.
+  - Adição de novas músicas com informações como título, artista e URL do YouTube.
+  - Edição e exclusão de músicas criadas pelo usuário.
 
-__1. Clone o repositório:__
-```
-git clone https://github.com/leticiasegurasse/API-Rick-and-Morty.git
-cd API-Rick-and-Morty
+- **Gerenciamento de Playlists:**
+  - Criação de playlists personalizadas.
+  - Adição e remoção de músicas em playlists.
+  - Visualização e exclusão de playlists criadas.
+
+- **Reprodução de Músicas:**
+  - Player integrado para músicas com suporte ao YouTube.
+  - Opção de selecionar músicas recomendadas ou adicionadas recentemente.
+
+- **Busca e Filtragem:**
+  - Barra de pesquisa para encontrar músicas e playlists.
+  - Ordenação de resultados por nome, popularidade ou data de criação.
+
+## 🚀 Tecnologias Utilizadas
+
+- **Frontend:**
+  - React.js com React Router.
+  - CSS Modules para estilização.
+  - Componentização com foco em reutilização e organização do código.
+
+- **Backend:**
+  - API RESTful para gerenciamento de músicas e playlists.
+  - JWT para autenticação segura.
+
+- **Bibliotecas e Ferramentas:**
+  - `axios` para chamadas HTTP.
+  - `react-player` para reprodução de vídeos/músicas.
+  - `jwt-decode` para manipulação de tokens JWT.
+
+## ⚙️ Instalação e Execução
+
+### Pré-requisitos
+
+- Node.js instalado na máquina.
+- Gerenciador de pacotes `npm` ou `yarn`.
+
+### Passo a Passo
+
+1. **Clone o repositório:**
+   ```
+   git clone https://github.com/leticiasegurasse/Trabalho-Spotcry.git
+   cd spotcry
 ```
 __2. Instale as dependências:__
 ```
 npm install
 ```
-__3. Execute o projeto:__
+__3. Inicie o servidor de desenvolvimento:__
 ```
-npm run start
+npm start
 ```
 __4. Acesse no navegador:__
 ```
 http://localhost:3000
 ```
-
-## 🌐Deploy
-O deploy foi feito utilizando `Surge`, e a aplicação pode ser acessada no seguinte link:
-
-[Surge](https://rick-and-foda.surge.sh/)
 
 ## 📑Funcionalidades Detalhadas
 - __Detalhes de Personagens:__ Ao clicar em um personagem, uma nova página mostra detalhes como status (vivo, morto, desconhecido), espécie e gênero.
@@ -49,20 +77,27 @@ O deploy foi feito utilizando `Surge`, e a aplicação pode ser acessada no segu
 - ## 📂Estrutura de Arquivos
 ```
 src/
-│
 ├── components/
-│   ├── CharacterCard.js   # Componente para exibir informações básicas do personagem
-│   └── Footer.js          # Componente que exibe o rodapé do projeto
-│
+│   ├── Feedback.js        # Exibe mensagens de erro ou sucesso.
+│   ├── MusicCard.js       # Cartão individual de música.
+│   ├── NavBar.js          # Barra de navegação.
+│   ├── PlaylistCard.js    # Cartão individual de playlist.
+│   ├── PlaylistTable.js   # Tabela para exibição de playlists.
+│   ├── PrivateRoute.js    # Proteção de rotas privadas.
+│   └── SearchBar.js       # Barra de pesquisa e ordenação.
 ├── pages/
-│   ├── DetailsPage.js     # Componente para exibir os detalhes dos personagens
-│   └── HomePage.js        # Componente para exibir a página inicial
-│
-├── styles/
-│   └── GlobalStyle.js     # Componente para estilização padrão das páginas
-│
-├── App.js                 # Componente principal da aplicação
-└── index.js               # Arquivo de entrada da aplicação
+│   ├── AddMusic.js        # Página para adicionar músicas.
+│   ├── AddPlaylist.js     # Página para criar playlists.
+│   ├── Home.js            # Página inicial com músicas e playlists.
+│   ├── Login.js           # Página de login.
+│   ├── MinhasMusicas.js   # Página de músicas do usuário.
+│   ├── MinhasPlaylists.js # Página de playlists do usuário.
+│   └── PlaylistDetails.js # Detalhes de uma playlist específica.
+├── services/
+│   ├── authService.js     # Serviços relacionados à autenticação.
+│   ├── musicService.js    # Serviços para gerenciamento de músicas.
+│   └── playlistService.js # Serviços para gerenciamento de playlists.
+└── App.js                 # Configuração principal do React Router.
 ```
 
 ## 📝Feito por
