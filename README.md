@@ -52,19 +52,22 @@ Este projeto é uma aplicação web que permite gerenciar músicas e playlists, 
 ### Passo a Passo
 
 1. **Clone o repositório:**
-   ```
-   git clone https://github.com/leticiasegurasse/Trabalho-Spotcry.git
-   cd spotcry
 ```
-__2. Instale as dependências:__
+git clone https://github.com/leticiasegurasse/Trabalho-Spotcry.git
+cd spotcry
+```
+
+2. **Instale as dependências:**
 ```
 npm install
 ```
-__3. Inicie o servidor de desenvolvimento:__
+
+3. **Inicie o servidor de desenvolvimento:**
 ```
 npm start
 ```
-__4. Acesse no navegador:__
+
+4. **Acesse no navegador:**
 ```
 http://localhost:3000
 ```
